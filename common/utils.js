@@ -59,7 +59,7 @@ const Utils = {
       Object.keys(param._source).forEach(key => {
         format[key] = param['_source'][key];
       });
-      results.push({...format, ...{ score: param._score }});
+      results.push({...format, ...{ score: (param._score/100) }});
     })
 
     return results;
